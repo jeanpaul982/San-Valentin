@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Amor</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap');
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        .container {
+            margin-top: 30px;
+            padding: 10px;
+        }
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 36px;
+        }
+        .heart {
+            font-size: 30px;
+            color: red;
+            animation: heartbeat 1s infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .hidden-message {
+            display: none;
+            font-size: 18px;
+            font-family: 'Pacifico', cursive;
+            background: rgba(255, 255, 255, 0.3);
+            color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: 0.3s;
+            margin: 5px;
+            font-family: 'Pacifico', cursive;
+        }
+        button:hover {
+            background-color: #c9184a;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .image-container div {
+            text-align: center;
+        }
+        .image-container img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .love-message {
+            margin-top: 5px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Feliz San Valentín, mi amor Yanaly ❤️</h1>
+        <p class="heart">💖 💖 💖</p>
+        <div class="image-container">
+            <div>
+                <img src="https://i.postimg.cc/nzKTkhm7/Whats-App-Image-2025-02-14-at-1-08-15-PM.jpg" alt="De ella">
+                <p class="love-message">De ella</p>
+            </div>
+            <h2 style="font-size: 20px;">Nació un gran amor 💞</h2>
+            <div>
+                <img src="https://i.postimg.cc/50WnLCXb/Whats-App-Image-2025-02-14-at-1-08-15-PM-1.jpg" alt="De él">
+                <p class="love-message">De él</p>
+            </div>
+        </div>
+        <div class="image-container">
+            <div>
+                <img src="https://i.postimg.cc/Nfn8RHnS/Whats-App-Image-2025-02-14-at-1-07-15-PM.jpg" alt="Extra 1">
+            </div>
+            <div>
+                <img src="https://i.postimg.cc/4NybK5Wp/Whats-App-Image-2025-02-14-at-1-07-16-PM.jpg" alt="Extra 2">
+            </div>
+        </div>
+        <button onclick="showMessage('message1')">💌 Opción 1</button>
+        <button onclick="showMessage('message2')">💖 Opción 2</button>
+        <button onclick="showMessage('message3')">💞 Opción 3</button>
+        <p class="hidden-message" id="message1">Desde el día en que entraste en mi vida, cada momento ha sido más hermoso. ¡Te amo con todo mi corazón! 💕</p>
+        <p class="hidden-message" id="message2">Tu amor ilumina mi mundo como el sol ilumina el día. ¡No hay palabras suficientes para decirte cuánto te amo! 💖</p>
+        <p class="hidden-message" id="message3">Cada día contigo es una nueva aventura llena de amor y felicidad. ¡Gracias por existir, mi amor! 💞</p>
+    </div>
+
+    <script>
+        function showMessage(id) {
+            document.querySelectorAll('.hidden-message').forEach(msg => msg.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
